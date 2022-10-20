@@ -1,6 +1,9 @@
 # maXbox4
 code compiler script studio
 
+![1161_workshop_WMI_Proc32](https://user-images.githubusercontent.com/109789632/196975972-e95acca9-72db-4461-84c5-84d6afd8a381.png)
+
+
 Release Notes maXbox 4.7.6.10 VII March 2022 mX476
 
 Add 45 Units + 12 Tutorials
