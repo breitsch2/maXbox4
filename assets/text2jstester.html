@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example showing how to use pas2js">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Text using pas2js</title>
+     <style>
+      h2 {text-align: center;}
+      .title {
+        margin: 40px 0 10px 0
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+ <style> 
+
+ 
+  textarea {
+    width: 70%;
+    height: 100%;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 10;
+  } 
+  .sidebar{
+  border-right-style: solid;
+  border-width: 1px;
+  border-right-color: grey;
+}
+ </style>      
+</head>
+
+<body>
+ <h2 class="title">
+        TetrisText mX4 <small class="text-muted"> EKON 27 Scratch Tester Pas2JSF</small>
+      </h2>
+<textarea></textarea> 
+  <script>
+        function openClick(){
+            alert("Open the gate!");
+        }
+        
+        function saveClick(){
+            alert("Save the late!");
+        }
+
+        function aboutClick(){
+            alert("Delphi maXbox4 hybrid application example");
+        }
+    </script>
+ <div class="row">
+        <div class="col-1 sidebar">
+            <nav class="nav flex-column">
+                <a class="nav-link" href="#" onclick="openClick()">Open</a>
+                <a class="nav-link" href="#" onclick="saveClick()">Save</a>
+                <a class="nav-link" href="#" onclick="aboutClick()">About</a>
+            </nav>
+        </div>
+        <div class="col-11">
+            <textarea>
+            </textarea>
+        </div>
+    </div>
+</body>
+</html>
+
+ <!-- https://medium.com/@Zawuza/build-your-first-hybrid-desktop-application-with-delphi-scriptgate-bootstrap-and-js-df530a73160  
+ https://bitbucket.org/freeonterminate/scriptgate/src/master/Source/SG.ScriptGate.Win.pas
+ -->
