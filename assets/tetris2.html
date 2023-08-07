@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example showing how to use pas2js">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris using pas2js</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="tetris.css">
     <script src="tetris.js"></script>
+    <title>Tetris mX4 example</title>
+    <style>
+      h2 {text-align: center;}
+      .title {
+        margin: 40px 0 10px 0
+      }
+    </style>
 </head>
-<body>
+<body>  
+  <!-- <div class="container"> -->
+    <h2 class="title">
+        Tetris mX4 <small class="text-muted"> EKON 27 Build Tetris using Pas2JS & js_PDF</small>
+      </h2>
     <div id="tetris">
         <div id="gameboard">
           <canvas id="my-canvas"></canvas>
@@ -54,6 +66,7 @@
     <div class="source">
         Created using &nbsp; <a target="_blank" href="https://wiki.freepascal.org/pas2js">pas2js.</a> &nbsp;&nbsp;Sources: &nbsp; <a target="new" href="tetris.lpr">Program</a> &nbsp; <a target="new" href="utetris.pp">unit</a>.
     </div>
+    <!-- </div>  -->
     <script>
       window.addEventListener("load", rtl.run);
     </script>
