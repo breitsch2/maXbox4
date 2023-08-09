@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example showing how to use pas2js">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Polygons using pas2js</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">   
+    <link rel="stylesheet" type="text/css" href="1235_tetris.css">
+    <script src="1235_tetris.js"></script>   -->
+    <title>SVG mX4 example</title>
+    <style>
+      h1 {text-align: center;}
+      .title {
+        margin: 40px 0 10px 0
+      }
+    </style>
+</head>
+<body>  
+  <!-- <div class="container"> -->
+    <h1 class="title">
+        Polygons mX4 <small class="text-muted"> EKON 27 Build SVG using Pas2JS</small>
+      </h1>
+    <style>
+svg     { background-color: black; }
+polygon { fill: none; }
+</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 400 400">
+     </svg>
+     <script>
+      const TRIANGLES = 90 ;
+      let   rot       = 0 ;
+      
+      function rotate()
+      {
+         let polygons = document.querySelectorAll( "polygon" ) ;
+         let angle    = 0 ;
+      
+         for( let i = 0; i < polygons.length; i++ )
+         {
+            triangle = polygons[i] ;
+            triangle.setAttribute( "transform", `rotate(${rot-2*i*360/TRIANGLES},${83.09*Math.sin(angle)},${83.09*Math.cos(angle)})` ) ;
+            angle += 2 * Math.PI / TRIANGLES ;
+         }
+      
+         rot   += 1.5 ;
+      }
+      
+      function init()
+      {
+         let svg   = document.querySelector( "svg" ) ;
+         let angle = 0 ;
+      
+         for( let i = 0; i < TRIANGLES; i++ )
+         {
+            let triangle = document.createElementNS( "http://www.w3.org/2000/svg", "polygon" ) ;
+            triangle.setAttribute( "points", `${72.11102*Math.sin(angle-0.59)},${72.11102*Math.cos(angle-0.59)} ${72.11102*Math.sin(angle+0.59)},${72.11102*Math.cos(angle+0.59)} ${129.28*Math.sin(angle)},${129.29*Math.cos(angle)}` ) ;
+            triangle.setAttribute( "transform", `rotate(${-2*i*360/TRIANGLES},${83.09*Math.sin(angle)},${83.09*Math.cos(angle)})` ) ;
+            triangle.setAttribute( "stroke", `hsl(${i*6},100%,50%)` ) ;
+            svg.appendChild( triangle ) ;
+            angle += 2 * Math.PI / TRIANGLES ;
+         }
+      }
+      
+      init() ;
+      setInterval( rotate, 50 ) ;
+     </script>
+     <h3>JavaScript maXbox4</h3>
+    <div class="source">
+        Created using &nbsp; <a target="_blank" href="https://wiki.freepascal.org/pas2js">pas2js.</a> &nbsp;&nbsp;Sources: &nbsp; <a target="new" href="tetris.lpr">Program</a> &nbsp; <a target="new" href="utetris.pp">unit</a>.
+    </div>
+    <!-- </div>  -->
+    <script>
+     <!-- window.addEventListener("load", rtl.run); -->
+    </script>
+</body>
+</html>
